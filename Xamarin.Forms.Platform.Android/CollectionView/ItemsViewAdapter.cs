@@ -14,12 +14,12 @@ namespace Xamarin.Forms.Platform.Android
 		const int TemplatedView = 42;
 
 		protected readonly ItemsView ItemsView;
-		readonly Func<View, Context, ItemContentView> _createItemContentView;
+		readonly Func<Context, ItemContentView> _createItemContentView;
 		internal readonly IItemsViewSource ItemsSource;
 		bool _disposed;
 		ASize _size;
 
-		internal ItemsViewAdapter(ItemsView itemsView, Func<View, Context, ItemContentView> createItemContentView = null)
+		internal ItemsViewAdapter(ItemsView itemsView, Func<Context, ItemContentView> createItemContentView = null)
 		{
 			CollectionView.VerifyCollectionViewFlagEnabled(nameof(ItemsViewAdapter));
 
@@ -29,7 +29,7 @@ namespace Xamarin.Forms.Platform.Android
 
 			if (_createItemContentView == null)
 			{
-				_createItemContentView = (view, context) => new ItemContentView(context);
+				_createItemContentView = (context) => new ItemContentView(context);
 			}
 		}
 
@@ -79,7 +79,7 @@ namespace Xamarin.Forms.Platform.Android
 				return new TextViewHolder(view);
 			}
 
-			var itemContentView = new ItemContentView(context);
+			var itemContentView = _createItemContentView(context);
 			return new TemplatedItemViewHolder(itemContentView, ItemsView.ItemTemplate);
 		}
 
