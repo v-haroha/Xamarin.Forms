@@ -41,5 +41,9 @@
 			get => (double)GetValue(HorizontalItemSpacingProperty);
 			set => SetValue(HorizontalItemSpacingProperty, value);
 		}
+
+		internal class SpanSizeLookup
+		{
+		}
 	}
 }

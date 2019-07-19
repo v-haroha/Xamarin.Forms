@@ -41,6 +41,15 @@
     <Compile Update="GalleryPages\CollectionViewGalleries\EmptyViewGalleries\EmptyViewLoadSimulateGallery.xaml.cs">
       <DependentUpon>EmptyViewLoadSimulateGallery.xaml</DependentUpon>
       </Compile>
+    <Compile Update="GalleryPages\CollectionViewGalleries\HeaderFooterGalleries\HeaderFooterString.xaml.cs">
+      <DependentUpon>HeaderFooterString.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="GalleryPages\CollectionViewGalleries\HeaderFooterGalleries\HeaderFooterView.xaml.cs">
+      <DependentUpon>HeaderFooterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="GalleryPages\CollectionViewGalleries\HeaderFooterGalleries\HeaderFooterTemplate.xaml.cs">
+      <DependentUpon>HeaderFooterTemplate.xaml</DependentUpon>
+    </Compile>
     <Compile Update="GalleryPages\CollectionViewGalleries\SelectionGalleries\PreselectedItemsGallery.xaml.cs">
       <DependentUpon>PreselectedItemsGallery.xaml</DependentUpon>
     </Compile>
@@ -55,6 +64,18 @@
     </EmbeddedResource>
     <EmbeddedResource Update="GalleryPages\CollectionViewGalleries\EmptyViewGalleries\EmptyViewSwapGallery.xaml">
 	<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="GalleryPages\CollectionViewGalleries\HeaderFooterGalleries\HeaderFooterGrid.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="GalleryPages\CollectionViewGalleries\HeaderFooterGalleries\HeaderFooterString.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="GalleryPages\CollectionViewGalleries\HeaderFooterGalleries\HeaderFooterTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="GalleryPages\CollectionViewGalleries\HeaderFooterGalleries\HeaderFooterView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="GalleryPages\CollectionViewGalleries\SelectionGalleries\MultipleBoundSelection.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
