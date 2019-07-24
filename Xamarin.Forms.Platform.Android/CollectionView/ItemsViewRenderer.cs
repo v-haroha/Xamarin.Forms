@@ -307,7 +307,7 @@ namespace Xamarin.Forms.Platform.Android
 			ItemsView.ScrollToRequested += ScrollToRequested;
 		}
 
-		void UpdateVerticalScrollBarVisibility()
+		protected virtual void UpdateVerticalScrollBarVisibility()
 		{
 			if (_defaultVerticalScrollVisibility == ScrollBarVisibility.Default)
 				_defaultVerticalScrollVisibility = VerticalScrollBarEnabled ? ScrollBarVisibility.Always : ScrollBarVisibility.Never;
@@ -320,7 +320,7 @@ namespace Xamarin.Forms.Platform.Android
 			VerticalScrollBarEnabled = newVerticalScrollVisibility == ScrollBarVisibility.Always;
 		}
 
-		void UpdateHorizontalScrollBarVisibility()
+		protected virtual void UpdateHorizontalScrollBarVisibility()
 		{
 			if (_defaultHorizontalScrollVisibility == ScrollBarVisibility.Default)
 				_defaultHorizontalScrollVisibility =
@@ -505,7 +505,7 @@ namespace Xamarin.Forms.Platform.Android
 			}
 		}
 
-		protected virtual int DeterminePosition(ScrollToRequestEventArgs args)
+		protected virtual int DetermineTargetPosition(ScrollToRequestEventArgs args)
 		{
 			if (args.Mode == ScrollToMode.Position)
 			{
@@ -544,7 +544,7 @@ namespace Xamarin.Forms.Platform.Android
 
 		protected virtual void ScrollTo(ScrollToRequestEventArgs args)
 		{
-			var position = DeterminePosition(args);
+			var position = DetermineTargetPosition(args);
 
 			if (args.IsAnimated)
 			{

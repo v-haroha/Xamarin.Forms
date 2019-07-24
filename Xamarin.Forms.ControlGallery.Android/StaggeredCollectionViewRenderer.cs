@@ -15,6 +15,7 @@ namespace Xamarin.Forms.ControlGallery.Android
 	{
 		public StaggeredCollectionViewRenderer(Context context) : base(context)
 		{
+			System.Diagnostics.Debug.WriteLine($">>>>>> StaggeredCollectionViewRenderer");
 		}
 
 		protected override LayoutManager SelectLayoutManager(IItemsLayout layoutSpecification)

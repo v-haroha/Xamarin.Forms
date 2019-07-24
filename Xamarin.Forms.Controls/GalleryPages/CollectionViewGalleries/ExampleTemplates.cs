@@ -305,8 +305,8 @@ namespace Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries
 
 		public static DataTemplate RandomSizeTemplate()
 		{
-			var indexHeightConverter = new IndexRequestRandomConverter(50, 300);
-			var indexWidthConverter = new IndexRequestConverter(0, 100, 100);
+			var indexHeightConverter = new IndexRequestRandomConverter(50, 150);
+			var indexWidthConverter = new IndexRequestRandomConverter(50, 150);
 			var colorConverter = new IndexColorConverter();
 
 			return new DataTemplate(() =>

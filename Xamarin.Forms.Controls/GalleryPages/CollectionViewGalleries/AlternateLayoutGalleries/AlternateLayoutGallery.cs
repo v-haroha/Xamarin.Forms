@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries.ScrollModeGalleries;
 
 namespace Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries.AlternateLayoutGalleries
 {
@@ -22,6 +23,13 @@ namespace Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries.AlternateL
 						descriptionLabel,
 						GalleryBuilder.NavButton("Staggered", () =>
 							new StaggeredLayout(), Navigation),
+
+							GalleryBuilder.NavButton("ScrollTo Item (Code, Staggered Grid)", () =>
+							new ScrollToCodeGallery(new StaggeredGridItemsLayout(3, ItemsLayoutOrientation.Vertical),
+								ScrollToMode.Element, ExampleTemplates.RandomSizeTemplate, () => new StaggeredCollectionView()), Navigation),
+
+							GalleryBuilder.NavButton("Scroll Modes Testing", () =>
+							new ScrollModeTestGallery(new StaggeredGridItemsLayout(3, ItemsLayoutOrientation.Vertical), ExampleTemplates.RandomSizeTemplate, () => new StaggeredCollectionView()), Navigation)
 					}
 				}
 			};

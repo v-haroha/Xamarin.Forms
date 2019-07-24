@@ -7,10 +7,17 @@
              mc:Ignorable="d"
              x:Class="Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries.AlternateLayoutGalleries.StaggeredLayout">
     <ContentPage.Content>
-        <local:StaggeredCollectionView x:Name="CV">
-            <local:StaggeredCollectionView.ItemsLayout>
-                <local:StaggeredGridItemsLayout Span="3" Orientation="Vertical" HorizontalItemSpacing="5" VerticalItemSpacing="5"></local:StaggeredGridItemsLayout>
-            </local:StaggeredCollectionView.ItemsLayout>
-        </local:StaggeredCollectionView>
+
+        <StackLayout>
+
+            
+            
+            <local:StaggeredCollectionView x:Name="CV">
+                <local:StaggeredCollectionView.ItemsLayout>
+                    <local:StaggeredGridItemsLayout Span="3" Orientation="Vertical" HorizontalItemSpacing="5" VerticalItemSpacing="5"></local:StaggeredGridItemsLayout>
+                </local:StaggeredCollectionView.ItemsLayout>
+            </local:StaggeredCollectionView>
+
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
