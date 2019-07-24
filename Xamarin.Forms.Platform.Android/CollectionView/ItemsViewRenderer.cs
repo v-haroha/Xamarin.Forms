@@ -528,8 +528,13 @@ namespace Xamarin.Forms.Platform.Android
 				RemoveItemDecoration(_itemDecoration);
 			}
 
-			_itemDecoration = new SpacingItemDecoration(_layout);
+			_itemDecoration = CreateSpacingDecoration(_layout);
 			AddItemDecoration(_itemDecoration);
+		}
+
+		protected virtual ItemDecoration CreateSpacingDecoration(IItemsLayout itemsLayout)
+		{
+			return new SpacingItemDecoration(itemsLayout);
 		}
 
 		void ScrollToRequested(object sender, ScrollToRequestEventArgs args)

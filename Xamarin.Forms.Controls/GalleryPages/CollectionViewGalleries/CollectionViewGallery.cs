@@ -2,6 +2,7 @@
 using Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries.GroupingGalleries;
 using Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries.SelectionGalleries;
 using Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries.ScrollModeGalleries;
+using Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries.AlternateLayoutGalleries;
 
 namespace Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries
 {
@@ -14,6 +15,7 @@ namespace Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries
 				Children =
 				{   
 					new Button { Text ="Enable CollectionView", AutomationId = "EnableCollectionView", Command = new Command(() => Device.SetFlags(new[] { ExperimentalFlags.CollectionViewExperimental })) },
+					GalleryBuilder.NavButton("Alternate Layout Galleries", () => new AlternateLayoutGallery(), Navigation),
 					GalleryBuilder.NavButton("Default Text Galleries", () => new DefaultTextGallery(), Navigation),
 					GalleryBuilder.NavButton("DataTemplate Galleries", () => new DataTemplateGallery(), Navigation),
 					GalleryBuilder.NavButton("Observable Collection Galleries", () => new ObservableCollectionGallery(), Navigation),

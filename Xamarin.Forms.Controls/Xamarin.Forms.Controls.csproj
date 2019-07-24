@@ -20,6 +20,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="BuildNumber.txt" />
+    <None Remove="GalleryPages\CollectionViewGalleries\AlternateLayoutGalleries\StaggeredLayout.xaml" />
   </ItemGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
